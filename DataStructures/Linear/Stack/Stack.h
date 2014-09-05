@@ -11,8 +11,7 @@ Description: This file contains the class declaration/definition for a stack
 #ifndef STACK_H
 #define STACK_H
 
-#include <iostream>
-#include "LinkedList/LinkedList.h"
+#include "../LinkedList/LinkedList.h"
 
 //  Class: Stack
 //  A templated stack class. Builds upon the linear linked list data structure 
