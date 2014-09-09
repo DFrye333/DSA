@@ -11,8 +11,6 @@ Description: This file contains the class declaration/definition for a linked
 #ifndef LLNode_H
 #define LLNode_H
 
-#include <iostream>
-
 //  Class: LLNode
 //  A templated linked list node class. Acts as the building block for the 
 // linked list class and, in turn, several linear data structures

@@ -13,8 +13,15 @@ whatever you like as long as you don't expect them to be perfect or bug-free!
 
 * Decide if I want to make my linked list singly-linked or doubly-linked. Or
 both. But maybe not that.
+* Generalize the binary tree to an n-ary tree, and turn the BTNode/BST
+classes into subclasses of these new n-ary classes.
+* Generalize trees as graphs, and subclasses trees from graphs similarly to
+binary trees/n-ary trees? Not too sure. This may be more work than it's worth.
 * Automated test suite.
-* Better commenting.
+* Better commenting that includes basic metadata, descriptions, run-time
+analysis, etc..
+* Improve class visibility scheme and interface definition by perhaps making 
+more things protected/private?
 * Implement many, many more data structures!
 * Implement a lot of algorithms too!
 * Probably a lot of other stuff.
