@@ -1,3 +1,13 @@
+/******************************************************************************
+
+Project: DataStructures-Algorithms_Practice
+File: DataStructures/Linear/Queue/Queue.h
+Programmer: David Frye
+Description: This file contains the class declaration/definition for a binary 
+    search tree data structure.
+
+******************************************************************************/
+
 #ifndef BST_H
 #define BST_H
 
@@ -284,7 +294,7 @@ class BST
 			return std::max(calculateHeight(node->getLeft()), calculateHeight(node->getRight())) + 1;
 		}
 
-		// Perform an in-order tree traversal (iteratively or recursively, as specified by the user).
+		// Perform an in-order tree traversal iteratively or recursively, as specified by the user (recursively by default).
 		void traverseInOrder(bool recursive = true)
 		{
 			recursive == true ? traverseInOrderRecursive(root) : traverseInOrderIterative();

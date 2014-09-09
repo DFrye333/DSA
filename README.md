@@ -13,6 +13,7 @@ whatever you like as long as you don't expect them to be perfect or bug-free!
 
 * Decide if I want to make my linked list singly-linked or doubly-linked. Or
 both. But maybe not that.
+* Make the binary search tree self-balanced (Red-Black, AVL, etc.).
 * Generalize the binary tree to an n-ary tree, and turn the BTNode/BST
 classes into subclasses of these new n-ary classes.
 * Generalize trees as graphs, and subclasses trees from graphs similarly to
