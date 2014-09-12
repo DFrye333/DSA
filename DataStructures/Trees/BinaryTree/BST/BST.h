@@ -1,7 +1,7 @@
 /******************************************************************************
 
 Project: DataStructures-Algorithms_Practice
-File: DataStructures/Linear/Queue/Queue.h
+File: DataStructures/Trees/BinaryTree/BST/BST.h
 Programmer: David Frye
 Description: This file contains the class declaration/definition for a binary 
     search tree data structure.
@@ -389,6 +389,71 @@ class BST
 		}
 
 	protected:
+
+		// Balance the binary search tree.
+		void balance(BTNode<T>* node)
+		{
+			// Calculate balance factor of node.
+			int balance_factor = calculateHeight(node->getLeft()) - calculateHeight(node->getRight());
+			
+			// Left subtree is unbalanced.
+			if (balance_factor == 2)
+			{
+				// Calculate balance factor of node's left child.
+				int child_balance_factor = calculateHeight(node->getLeft()->getLeft()) - calculateHeight(node->getLeft()->getRight());
+
+				// Left-right case.
+				if (child_balance_factor == -1)
+				{
+					// Reduce to left-left case.
+					balance_rotate_left(node->getLeft());
+				}
+
+				// Left-left case.
+				balance_rotate_right(node);
+			}
+
+			// Right subtree is unbalanced.
+			else if (balance_factor == -2)
+			{
+				// Calculate balance factor of node's right child.
+				int child_balance_factor = calculateHeight(node->getRight()->getLeft()) - calculateHeight(node->getRight()->getRight());
+
+				// Right-left case.
+				if (child_balance_factor == 1)
+				{
+					// Reduce to right-right case.
+					balance_rotate_right(node->getRight());
+				}
+
+				// Right-right case.
+				balance_rotate_left(node);
+			}
+		}
+
+		// Rotate the node's subtrees left.
+		void balance_rotate_left(BTNode<T>* node)
+		{
+			BTNode<T>* temp = node->getRight();
+
+			node->setRight(temp->getLeft());
+			node->getParent()->setLeft(temp);
+			temp->setParent(node->getParent());
+			node->setParent(temp);
+			temp->setLeft(node);
+		}
+
+		// Rotate the node's subtrees right.
+		void balance_rotate_right(BTNode<T>* node)
+		{
+			BTNode<T>* temp = node->getLeft();
+
+			node->setLeft(temp->getRight());
+			node->getParent()->setRight(temp);
+			temp->setParent(node->getParent());
+			node->setParent(temp);
+			temp->setRight(node);
+		}
 
 		// A pointer to the root BTNode of the tree.
 		BTNode<T>* root;

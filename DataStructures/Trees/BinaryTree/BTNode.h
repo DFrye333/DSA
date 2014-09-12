@@ -1,7 +1,7 @@
 /******************************************************************************
 
 Project: DataStructures-Algorithms_Practice
-File: DataStructures/Trees/BTNode.h
+File: DataStructures/Trees/BinaryTree/BTNode.h
 Programmer: David Frye
 Description: This file contains the class declaration/definition for a binary 
     tree node. It serves as the basis for binary tree data structures.
