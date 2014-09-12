@@ -13,9 +13,9 @@ Description: This file contains the class declaration/definition for a binary
 
 #include <iostream>
 
-#include "BTNode.h"
-#include "../Linear/Stack/Stack.h"
-#include "../Linear/Queue/Queue.h"
+#include "../BTNode.h"
+#include "../../../Linear/Stack/Stack.h"
+#include "../../../Linear/Queue/Queue.h"
 
 //  Class: BST
 //  A templated linked list node class. Acts as the building block for the 
@@ -27,7 +27,7 @@ class BST
 	public:
 
 		// Default constructor.
-		BST() {};
+		BST() { root = NULL; }
 
 		// Alternative constructor for when provided with an array of initial node values.
 		BST(T values[], int count)
